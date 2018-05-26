@@ -1,0 +1,149 @@
+{
+    "docs": [
+        {
+            "location": "/",
+            "text": "Projekt Move - Dokumentation Gin Tonic\n\n\nHier finden die Dokumentation zu unserer Implementierung des MOVE Projekts f\u00fcr das International Office der THI. \n\n\nTeam\n\n\n\n\nTunahan \u00d6zsahin \n\n\nVincent Brunner \n\n\nChristopher Senn \n\n\nDavid Neubauer  \n\n\nVanessa Straube \n\n\nHannah Nicklas",
+            "title": "Home"
+        },
+        {
+            "location": "/#projekt-move-dokumentation-gin-tonic",
+            "text": "Hier finden die Dokumentation zu unserer Implementierung des MOVE Projekts f\u00fcr das International Office der THI.",
+            "title": "Projekt Move - Dokumentation Gin Tonic"
+        },
+        {
+            "location": "/#team",
+            "text": "Tunahan \u00d6zsahin   Vincent Brunner   Christopher Senn   David Neubauer    Vanessa Straube   Hannah Nicklas",
+            "title": "Team"
+        },
+        {
+            "location": "/project/",
+            "text": "Projektbeschreibung\n\n\nHier finden Sie eine detailierte Beschreibung des MOVE-Projektes \n\n\nHintergrund\n\n\nProjektablauf",
+            "title": "Projektbeschreibung"
+        },
+        {
+            "location": "/project/#projektbeschreibung",
+            "text": "Hier finden Sie eine detailierte Beschreibung des MOVE-Projektes",
+            "title": "Projektbeschreibung"
+        },
+        {
+            "location": "/project/#hintergrund",
+            "text": "",
+            "title": "Hintergrund"
+        },
+        {
+            "location": "/project/#projektablauf",
+            "text": "",
+            "title": "Projektablauf"
+        },
+        {
+            "location": "/concept/",
+            "text": "Konzept\n\n\nHier finden Sie eine Erk\u00e4rung unseres vollst\u00e4ndigen Konzeptes. Es sind Beschreibungen der einzelnen Funktionen und ihre Umsetzung dokumentiert. \n\n\nWorldmap\n\n\nStudy Abroad\n\n\nInternship\n\n\nSchaltfl\u00e4chen\n\n\nKomponenten",
+            "title": "Konzept"
+        },
+        {
+            "location": "/concept/#konzept",
+            "text": "Hier finden Sie eine Erk\u00e4rung unseres vollst\u00e4ndigen Konzeptes. Es sind Beschreibungen der einzelnen Funktionen und ihre Umsetzung dokumentiert.",
+            "title": "Konzept"
+        },
+        {
+            "location": "/concept/#worldmap",
+            "text": "",
+            "title": "Worldmap"
+        },
+        {
+            "location": "/concept/#study-abroad",
+            "text": "",
+            "title": "Study Abroad"
+        },
+        {
+            "location": "/concept/#internship",
+            "text": "",
+            "title": "Internship"
+        },
+        {
+            "location": "/concept/#schaltflachen",
+            "text": "",
+            "title": "Schaltfl\u00e4chen"
+        },
+        {
+            "location": "/concept/#komponenten",
+            "text": "",
+            "title": "Komponenten"
+        },
+        {
+            "location": "/structure/",
+            "text": "Projektstruktur\n\n\nHier finden Sie eine Erkl\u00e4rung \u00fcber unsere gew\u00e4hle Projekt- bzw. Ordnerstruktur und Methode. \n\n\nOrdnerstruktur\n\n\nRouting\n\n\nMethoden\n\n\nGliederung in Komponenten",
+            "title": "Struktur"
+        },
+        {
+            "location": "/structure/#projektstruktur",
+            "text": "Hier finden Sie eine Erkl\u00e4rung \u00fcber unsere gew\u00e4hle Projekt- bzw. Ordnerstruktur und Methode.",
+            "title": "Projektstruktur"
+        },
+        {
+            "location": "/structure/#ordnerstruktur",
+            "text": "",
+            "title": "Ordnerstruktur"
+        },
+        {
+            "location": "/structure/#routing",
+            "text": "",
+            "title": "Routing"
+        },
+        {
+            "location": "/structure/#methoden",
+            "text": "",
+            "title": "Methoden"
+        },
+        {
+            "location": "/structure/#gliederung-in-komponenten",
+            "text": "",
+            "title": "Gliederung in Komponenten"
+        },
+        {
+            "location": "/conventions/",
+            "text": "Code Conventions\n\n\nHier finden Sie alle Erkl\u00e4rungen zu den verwendeten Bezeichnungen und Nomenklatur. \n\n\nHTML\n\n\nCSS\n\n\nvar.css (globale Styles)",
+            "title": "Code Conventions"
+        },
+        {
+            "location": "/conventions/#code-conventions",
+            "text": "Hier finden Sie alle Erkl\u00e4rungen zu den verwendeten Bezeichnungen und Nomenklatur.",
+            "title": "Code Conventions"
+        },
+        {
+            "location": "/conventions/#html",
+            "text": "",
+            "title": "HTML"
+        },
+        {
+            "location": "/conventions/#css",
+            "text": "",
+            "title": "CSS"
+        },
+        {
+            "location": "/conventions/#varcss-globale-styles",
+            "text": "",
+            "title": "var.css (globale Styles)"
+        },
+        {
+            "location": "/outlook/",
+            "text": "Ausblick\n\n\nHier finden Sie alles was wir innerhalb des Projekts nicht geschafft haben und einen Ausblick in die Zukunft \n\n\nWas noch fehlt:\n\n\nUnsere Beschr\u00e4nkungen",
+            "title": "Ausblick"
+        },
+        {
+            "location": "/outlook/#ausblick",
+            "text": "Hier finden Sie alles was wir innerhalb des Projekts nicht geschafft haben und einen Ausblick in die Zukunft",
+            "title": "Ausblick"
+        },
+        {
+            "location": "/outlook/#was-noch-fehlt",
+            "text": "",
+            "title": "Was noch fehlt:"
+        },
+        {
+            "location": "/outlook/#unsere-beschrankungen",
+            "text": "",
+            "title": "Unsere Beschr\u00e4nkungen"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+site_name: Documentation move-project (Gin Tonic)
+pages:
+    - Home: index.md    
+    - Projektbeschreibung: project.md
+    - Konzept: concept.md
+    - Struktur: structure.md
+    - Code Conventions: conventions.md
+    - Ausblick: outlook.md
+theme: readthedocs
+extra_css: [extra.css]

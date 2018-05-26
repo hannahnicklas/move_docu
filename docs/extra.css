@@ -1,0 +1,9 @@
+/* Hier bitte alle extra Style hinzufügen, beziehen sich auf alle HTML Seiten */
+
+h1 {
+    color: #005075;
+  }
+
+  h2 {
+    color: rgba(0,80,117,0.7);
+  }
