@@ -6,10 +6,10 @@ Hier finden Sie eine Erkärung unseres vollständigen Konzeptes. Es sind Beschre
 ![Screenshot](img/concept/Home.png)
 
 ###Argumentation
-Die Landing Page soll bei Studenten, die die Website zum erstem Mal besuchen einladend wirken und das Interesse wecken, sich weiter mit der Seite und damit auch dem Thema Auslandssemester zu beschäftigen. Durch das direkte Ansprechen des Nutzers (nach dem Login) soll er auf direkt auf einer persönlichen Ebene abgeholt werden. Es soll ein "Es geht hier um dich" - Gefühl vermittelt werden, das bei der aktuellen, mühsamen Informationssuche über Moodle komplett verloren geht. Aus diesem Grund haben wir auch die Farbe blau für für ihre beruhigende und Vertauenserzeugende Wirkung als Hintergrund und darauf das Orange, das als warme Farbe Optimismus und Glück erzeugt, gewählt. Diese beiden Leitfarben sind auf der Landing Page besonders stark vertreten um beim Nutzer eine positive Grundstimmung zu erzeugen, sie ziehen sich allerdings auch durch die komplette Seite.
+Die Startseite soll bei Studenten, die die Website zum erstem Mal besuchen einladend wirken und das Interesse wecken, sich weiter mit der Seite und damit auch dem Thema Auslandssemester zu beschäftigen. Durch das direkte Ansprechen des Nutzers (nach dem Login) soll er auf direkt auf einer persönlichen Ebene abgeholt werden. Es soll ein "Es geht hier um dich" - Gefühl vermittelt werden, das bei der aktuellen, mühsamen Informationssuche über Moodle komplett verloren geht. Aus diesem Grund haben wir auch die Farbe blau für für ihre beruhigende und Vertauenserzeugende Wirkung als Hintergrund und darauf das Orange, das als warme Farbe Optimismus und Glück erzeugt, gewählt. Diese beiden Leitfarben sind auf der Startseite besonders stark vertreten um beim Nutzer eine positive Grundstimmung zu erzeugen, sie ziehen sich allerdings auch durch die komplette Seite.
 
 ###Implementierung
-Bei der Landing Page an sich handelt es sich um eine Standart HTML Seite ohne die Verwendung von Angular Funktionen. Es wurde lediglich etwas Typescript zum erzeugen des Paralax Scroll Effektes verwendet.
+Bei der Startseite an sich handelt es sich um eine Standard HTML Seite ohne die Verwendung von Angular Funktionen. Es wurde lediglich etwas Typescript zum erzeugen des Paralax Scroll Effektes verwendet.
 <br> Login
 
 ##Study Abroad
@@ -52,7 +52,10 @@ Die implementierung erfolgte hier analog zu <a href="#implementationGeneral">Gen
 ![Screenshot](img/concept/StudyAbroad_Experiences.jpg)
 
 <h4>Argumentation</h4>
-Die Experiences Seite stellt alle Erfahrungsberichte übersichtlich dar. Auf der rechten Seite befinden sich wieder die Filteroptionen nach einem ähnlichen Schema wie bereits auf der Weltkarte. Der Nutzer muss sich nicht mehr mühsam PDF Dateien aus einer Liste raussuchen sondern bekommt die Erfahrungsberichte für ihn gefiltert in einem übersichtlichen Layout präsentiert. <br>
+Die Experiences Seite stellt alle Erfahrungsberichte übersichtlich dar. Auf der rechten Seite befinden sich wieder die Filteroptionen nach einem ähnlichen Schema, wie bereits auf der Weltkarte. Der Nutzer muss sich nicht mehr mühsam PDF Dateien aus einer Liste raussuchen, sondern bekommt die Erfahrungsberichte für ihn gefiltert in einem übersichtlichen Layout präsentiert. <br>
+
+<h4 id="implementationGeneral">Implementierung</h4>
+Die Komponente "experiences" ist jeweils in einzelne Komponenten "experiences-boxes" untergliedert. Diese beschreiben die einzelnen blauen Boxen und erhalten ihre Daten aus der Pseudodatenbank der zugehörigen Universität. Mit Klick auf einen Erfahrungsbericht wird man auf die detaillierte Seite der Erfahrungsberichte weitergeleitet. Diese ist jedoch aktuell noch, aufgrund der Beschränkung durch die Pseudo Datenbank, nicht an den jeweiligen Erfahrungsbericht angepasst. 
 
 ![Screenshot](img/concept/StudyAbroad_ExperiencesDetail.jpg)
 Nachdem der Nutzer sich für einen Erfahrungsbericht entschieden hat und diesen anklickt, kommt er auf die entsprechende Detailseite. Hier findet er eine Bewertung unterschiedlicher Kategorien mit 0 - 5 Sternen, sowie einen Text und oder Bilder vom Verfasser des Berichtes.
@@ -64,7 +67,7 @@ Die implementierung erfolgte hier analog zu <a href="#implementationGeneral">Gen
 ###Study Courses
 ![Screenshot](img/concept/StudyAbroad_Courses.jpg)
 
-<h4>Arugmentation</h4>
+<h4>Argumentation</h4>
 Auf der Courses Seite kann der Nutzer sich über die an der Universität angebotenen Kurse informieren. Wie gewohnt befinden sich rechts wieder Filteroptionen und eine Suchfunktion. Hier kann der Student bereits vor der Bewerbung sichergehen, dass sich die angebotenen Kurse mit denen der THI überschneiden und somit später im Learning Agreement angerechnet werden können. <br>
 
 ![Screenshot](img/concept/StudyAbroad_CoursesDetail.jpg)
