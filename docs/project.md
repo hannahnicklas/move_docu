@@ -4,7 +4,7 @@ Hier finden Sie eine detaillierte Beschreibung des MOVE-Projektes
 
 ##Hintergrund
 Move ist eine Website für Studenten der Technischen Hochschule Ingolstadt, die im Ausland studieren oder ein Praktikum machen wollen.
-Die THI bietet zwar auch jetzt schon umfangreiche Informationen zu den Partnerhochschulen, sowie einige Erfahrungsberichte an, allerdings sind diese für die Studierenden nur schwer auffindbar und ohne wirkliche Struktur an verschiedenen Stellen im Moodle der Hochschule gespeichert.
+Die THI bietet bereits umfangreiche Informationen zu den Partnerhochschulen, sowie einige Erfahrungsberichte an, allerdings sind diese für die Studierenden nur schwer auffindbar und ohne wirkliche Struktur an verschiedenen Stellen im Moodle der Hochschule gespeichert.
 Wenn man es sich doch antut, alle diese Informationen auszuwerten und sich für ein Auslandssemester bewirbt, ist man bei allen weiteren Dingen auf sich allein gestellt, wenn man sich nicht selbstständig mit Fragen an einen Mitarbeiter des International Office wendet.
 
 Deswegen soll Move alle relevanten Informationen an einem Ort bündeln und den Studenten übersichtlich präsentieren um die Frustration der Studenten im Bewerbungsprozess für ein Auslandssemester zu reduzieren.
@@ -17,5 +17,5 @@ Als wir dieses Semester mit der Implementierung der Website begannen, war das ni
 Die Umsetzung des Projekts erfolgte mithilfe von Angular 5.
 Da wir mit der Umsetzung von Move zum erstem Mal mit Angular oder überhaupt irgendeinem Workframe in Berührung kamen, mussten wir uns zunächst in den Angular Workflow einarbeiten.
 
-Anschließend setzten wir auf der Grundlage unseres Prototyps die Komponenten und das Routing für die Website, sowie unsere "Pseudodatenbank" auf. Danach implementierten wir parallel zueinander die einzelnen Unterseiten.
+Anschließend setzten wir auf der Grundlage unseres Prototyps die Komponenten und das Routing für die Website, sowie die Pseudodatenbank auf. Danach implementierten wir parallel zueinander die einzelnen Unterseiten.
 Zuletzt schrieben wir noch die seitenübergreifende Logik wie zum Beispiel das Favorisieren einer Universität oder den Login.
