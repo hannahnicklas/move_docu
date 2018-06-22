@@ -55,7 +55,7 @@ Die implementierung erfolgte hier analog zu <a href="#implementationGeneral">Gen
 Die Experiences Seite stellt alle Erfahrungsberichte übersichtlich dar. Auf der rechten Seite befinden sich wieder die Filteroptionen nach einem ähnlichen Schema, wie bereits auf der Weltkarte. Der Nutzer muss sich nicht mehr mühsam PDF Dateien aus einer Liste raussuchen, sondern bekommt die Erfahrungsberichte für ihn gefiltert in einem übersichtlichen Layout präsentiert. <br>
 
 <h4 id="implementationGeneral">Implementierung</h4>
-Die Komponente "experiences" ist jeweils in einzelne Komponenten "experiences-boxes" untergliedert. Diese beschreiben die einzelnen blauen Boxen und erhalten ihre Daten aus der Pseudodatenbank der zugehörigen Universität. Mit Klick auf einen Erfahrungsbericht wird man auf die detaillierte Seite der Erfahrungsberichte weitergeleitet. Diese ist jedoch aktuell noch, aufgrund der Beschränkung durch die Pseudo Datenbank, nicht an den jeweiligen Erfahrungsbericht angepasst. 
+Die Komponente "experiences" ist jeweils in einzelne Komponenten "experiences-boxes" untergliedert. Diese beschreiben die einzelnen blauen Boxen und erhalten ihre Daten aus der Pseudodatenbank der zugehörigen Universität. Mit Klick auf einen Erfahrungsbericht wird man auf die detaillierte Seite der Erfahrungsberichte weitergeleitet. Diese ist jedoch aktuell noch, aufgrund der Beschränkung durch die Pseudo Datenbank, nicht an den jeweiligen Erfahrungsbericht angepasst. py
 
 ![Screenshot](img/concept/StudyAbroad_ExperiencesDetail.jpg)
 Nachdem der Nutzer sich für einen Erfahrungsbericht entschieden hat und diesen anklickt, kommt er auf die entsprechende Detailseite. Hier findet er eine Bewertung unterschiedlicher Kategorien mit 0 - 5 Sternen, sowie einen Text und oder Bilder vom Verfasser des Berichtes.
@@ -85,7 +85,11 @@ Die implementierung erfolgte hier analog zu <a href="#implementationGeneral">Gen
 Auf der Profilseite sieht der Nutzer alle Informationen, die das International Office benötigt um seine Bewerbung zu bearbeiten. Mithilfe des Edit Buttons können alle Felder in jederzeit und in Echtzeit bearbeitet werden.
 
 <h4>Implementierung</h4>
-TODO
+Das Layout wurde mithilfe von drei Tabellen aufgebaut und die Daten des angemeldeten Nutzers werden aus unserer Pseudodatenbank herausgezogen. 
+Auf dieser Unterseite befinden sich die Daten des angemeldeten Users.
+Einige Daten, wie z.B. Email, Mobile und Emergency Contact kann der Benutzer durch anklicken des "Edit-Buttons" bearbeiten und abspeichern.
+Die abgespeicherten Daten werden an unsere "Datenbank" übermittelt und zur Laufzeit mit der Funktion save(), die die persönlichen Daten der Studenten mit den neuen eingetragenen Werten überschreibt (UPDATE).
+
 
 ###Application
 ![Screenshot](img/concept/User_Application.jpg)
@@ -96,7 +100,19 @@ Diese sind zunächst in zwei Listen unterteilt, die Favoritenliste und die Bewer
 Zusätzlich hat kann der Nutzer auf der rechten Seite noch seinen Bewerbungsfortschritt sehen. Sind beispielsweise unter Profile nicht alle Punkte ausgefüllt wird dies hier nochmal angezeigt. Ganz unten beim Bewerbungsfortschritt kann die Bewerbung, wenn letztendlich alles richtig ausgefüllt wurde, abgeschickt werden.
 
 <h4>Implementierung</h4>
-TODO
+Auf dieser Seite wird der eigentliche Bewerbungsprozess in die Wege geleitet. Sie beinhaltet eine "Drag and Drop" funktionalität.
+Im linken Bereich werden die vom Studenten als Favorit gesetzten Universitäten aufgelistet. Favoriten kann man hier durch klick des "x" Buttons aus der Liste entfernen.
+Diese Universitäten in der Favoritenliste sind "Draggable", d.h. mit der Maus bewegbar.
+Im rechten Bereich ist die Rangliste (Liste der Universitäten bei dem der Student sich bewirbt).
+In diese Liste muss der Student nun die Favoriten einzeln hineinlegen "Dropzone".
+Innerhalb der Rangliste können die Universitäten frei nach belieben geordnet oder wieder gelöscht werden. Die Liste muss 5 Favoriten enthalten, da man sich im Bewerbungsprozess bei 5 Universitäten bewerben muss. Sobald sich 5 Universitäten in der Rangliste befinden blendet sich der "Finish-Application" Button ein.
+
+###Application
+![Screenshot](img/concept/profile_contact.jpg)
+<h4>Argumentation</h4>
+Diese Seite beinhaltet lediglich die Kontaktdaten der THI und die des International Office für Auslands- und Studienangelegenheiten. 
+
+
 
 ##Internship
 
