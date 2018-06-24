@@ -9,11 +9,13 @@ Die Startseite soll bei Studenten, die die Website zum erstem Mal besuchen, einl
 
 ####Implementierung
 Bei der Startseite an sich handelt es sich um eine Standard HTML Seite ohne die Verwendung von Angular Funktionen. Es wurde lediglich etwas Typeskript zum Erzeugen des Paralax Scroll Effektes verwendet.
-<mark>insert Login Screen</mark>
+
+![Screenshot](img/concept/login.jpg)
+
 
 ##Study Abroad
 ###Worldmap 
-![Screenshot](img/concept/StudyAbroad_WorldMap.jpg)
+![Screenshot](img/concept/worldmap.jpg)
 
 ####Argumentation
 Auf der Weltkarte werden dem Nutzer zunächst alle verfügbaren Partneruniversitäten angezeigt. Über die Filtermöglichkeiten auf der rechten Seite kann er sich die Unis nach seinen Präferenzen filtern lassen oder, falls er schon weiß wohin er will, direkt nach einer bestimmten Universität suchen, zu der er nähere Informationen erhalten möchte. Es ist wichtig, dass auf dieser Seite noch keine "Zu meinen Favoriten hinzufügen"-Option angeboten wird. Ins Ausland zu gehen ist zum einen in der Regel teuer und kann zum anderen schnell in eine negative Erfahrung umschlagen, wenn man an einem Land oder einer Universität landet, in der man sich nicht wohlfühlt. Deshalb möchten wir sichergehen, dass sich die Studenten nicht schnell für eine Uni bewerben, von der sie irgendwann einmal von einem Freund eines Freundes etwas Positives gehört haben und dann enttäuscht werden, wenn sie dort sind. 
@@ -22,6 +24,22 @@ Die Studenten sollen, auch wenn sie schon wissen oder zumindest meinen zu wissen
 ####Implementierung
 Für die Weltkarte haben wir letztendlich die Standard <a href="https://www.mapbox.com/" target="_blank">Mapbox</a> Bibliothek verwendet. Wir hatten zuerst versucht, mit <a href="https://github.com/Wykks/ngx-mapbox-gl" target="_blank">Ngx Mapbox</a> zu arbeiten, allerdings schien diese nicht mit unserer Angular Version kompatibel zu sein. Die Daten für die Punkte auf der Weltkarte haben wir mithilfe von <mark>hier Lösung einfügen</mark> implementiert.
 <mark>Das Filtersystem steht im Moment noch auf der To Do Liste.</mark> Unser Lösungsansatz wäre gewesen, alle Universitäten in der Datenbank mit entsprechenden Tags zu versehen und den University Service entsprechend nur die Universitäten mit den richtigen Tags liefern zu lassen.
+
+
+* ###Zoom zur Universität
+
+![Screenshot](img/concept/showuni.png)
+
+<mark>Beschreibung der Implementierung fehlt noch</mark>
+
+* ###Detailansicht der Universitäten 
+
+![Screenshot](img/concept/detailuni.jpg)
+
+<mark>Beschreibung der Implementierung fehlt noch</mark>
+
+
+
 
 ###General 
 ![Screenshot](img/concept/StudyAbroad_General.jpg)
@@ -52,6 +70,21 @@ Die Experiences-Seite stellt alle Erfahrungsberichte übersichtlich dar. Auf der
 
 ####Implementierung
 Die Komponente "experiences" ist jeweils in einzelne Komponenten "experiences-boxes" untergliedert. Diese beschreiben die einzelnen blauen Boxen und erhalten ihre Daten aus der Pseudodatenbank der zugehörigen Universität. Mit Klick auf einen Erfahrungsbericht wird man auf die detaillierte Seite der Erfahrungsberichte weitergeleitet. Diese ist aktuell noch, aufgrund der Beschränkung durch die Pseudodatenbank, nicht an den jeweiligen Erfahrungsbericht angepasst. 
+
+<b>Filterung</b>
+
+Die Filter sind auf allen Seiten gleich gestylt und werden aus der SCSS-Datei der „app-filter“ Komponente geladen. Zusätzlich beinhaltet diese Komponente eine Komponente „app-searchbar“ für die einheitliche Suchleiste über den Filterkategorien. Sobald eine Seite die Filteroptionen nutzt wird die SCSS Datei der Filter-Komponente in die SCSS Datei der jeweiligen Seite importiert. 
+
+Die jeweiligen Filteroptionen (filter-points) der einzelnen Filterkategorien (filter-category), wie Sorting oder Language, werden mit ngFor (*ngFor= “let sorting of sortings“) aus der Typescript Datei der zugehörigen Seite geladen. Diese beinhaltet für jede Filterkategorie einen Array mit allen Filteroptionen. Dieser wird an einigen Stellen auf der Anzeige nach einer Länge von 3 Elementen (slice:0:3) abgeschnitten und ein More-Button hinzugefügt. Durch diesen Button kann der Rest des Arrays angezeigt werden und somit die übrigen Filteroptionen gewählt werden. Sobald die Optionen durch „More“ ausgeklappt wurden, erscheint ein „Less“ Button, um die Optionen wieder einzuklappen. 
+
+Die jeweils durch einen Klick aktivierte Filteroption erhält die Klasse „active“ und erscheint in orange, bis eine andere Filteroption geklickt wurde:  
+[class.active]="ssclicked === sortingsmall" (click)="ssclicked = (ssclicked === sortingsmall ? null :sortingsmall)"
+
+Aktuell können durch den Nutzer bestimmte Filteroptionen aktiviert werden, die eigentliche Filterung der Anzeige wurde aber nicht implementiert. Das liegt daran, dass nur eine Pseudodatenbank zur Verfügung steht. Daher wurde nur die Darstellung implementiert.
+
+
+
+###Experiences im Detail
 
 ![Screenshot](img/concept/StudyAbroad_ExperiencesDetail.jpg)
 Nachdem der Nutzer sich für einen Erfahrungsbericht entschieden hat und diesen anklickt, kommt er auf die entsprechende Detailseite. Hier findet er eine Bewertung unterschiedlicher Kategorien mit 0 - 5 Sternen, sowie einen Text und oder Bilder vom Verfasser des Berichtes.
@@ -85,7 +118,7 @@ Einige Daten, wie z.B. E-Mail, Mobile und Emergency Contact kann der Benutzer du
 Die abgespeicherten Daten werden an die Pseudodatenbank übermittelt und zur Laufzeit mit der Funktion save(), die die persönlichen Daten der Studenten mit den neuen eingetragenen Werten überschreibt, übergeben.
 
 ###Application 
-![Screenshot](img/concept/User_Application.jpg)
+![Screenshot](img/concept/application.jpg)
 
 ####Argumentation
 Unter Application befinden sich die Universitäten, die unter Study Abroad ausgewählt wurden.
@@ -100,7 +133,14 @@ Im rechten Bereich ist die Rangliste (Liste der Universitäten bei dem der Stude
 In diese Liste muss der Student nun die Favoriten einzeln in die „Dropzone“ hineinlegen.
 Innerhalb der Rangliste können die Universitäten frei nach Belieben geordnet oder wieder gelöscht werden. Die Liste darf maximal 5 Favoriten enthalten, da man sich im Bewerbungsprozess bei bis zu 5 Universitäten bewerben kann. Sobald sich mindestens eine Universität in der Rangliste befindet, blendet sich der "Finish-Application"-Button ein.
 
-###Application
+* #### Add to Favorits - Button 
+
+![Screenshot](img/concept/favorits.jpg)
+
+<mark>Eine Erklärung der Implementierung des add to favorits Button</mark>
+
+
+###Contact
 ![Screenshot](img/concept/profile_contact.jpg)
 
 ####Argumentation
