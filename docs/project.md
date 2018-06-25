@@ -2,6 +2,17 @@
 
 Hier finden Sie eine detaillierte Beschreibung des MOVE-Projektes 
 
+##Installationshinweise
+Verwendete Software:
+<ul>
+    <li> Nodejs </li>
+    <li> git-scm </li>
+    <li> Angular 5 </li>
+    <li> Node Package Manager </li>
+    <li> Visual Studio Code </li>
+</ul>
+Um das Projekt erstmals zu starten müssen die Projektdateien zuerst in VS Code geöffnet werden. Anschließend muss zuerst der Befehl "npm install" ausgeführt werden, um die grundlegenden, nicht im Git gespeicherten Bibliotheken zu installieren. Danach kann das Projekt mit dem Befehl "ng --serve --port 4200" gestartet werden. In der darauf folgenden Fehlermeldung stehen alle von uns zusätzlich installierten Pakete. Diese müssen manuell mit dem Befehl "npm --save install [Paketname]" nachinstalliert werden. Ist dies geschehen, sollte Move nach dem nochmaligen ausführen von "ng --serve --port 4200" im Browser unter "localhost:4200" problemlos erreichbar sein.
+
 ##Hintergrund
 Move ist eine Website für Studenten der Technischen Hochschule Ingolstadt, die im Ausland studieren oder ein Praktikum machen wollen.
 Die THI bietet bereits umfangreiche Informationen zu den Partnerhochschulen, sowie einige Erfahrungsberichte an, allerdings sind diese für die Studierenden nur schwer auffindbar und ohne wirkliche Struktur an verschiedenen Stellen im Moodle der Hochschule gespeichert.

@@ -22,23 +22,42 @@ Auf der Weltkarte werden dem Nutzer zunächst alle verfügbaren Partneruniversit
 Die Studenten sollen, auch wenn sie schon wissen oder zumindest meinen zu wissen, wohin sie möchten, immer zuerst Informationen zu ihrem Reiseziel erhalten.
 
 ####Implementierung
-Für die Weltkarte haben wir letztendlich die Standard <a href="https://www.mapbox.com/" target="_blank">Mapbox</a> Bibliothek verwendet. Wir hatten zuerst versucht, mit <a href="https://github.com/Wykks/ngx-mapbox-gl" target="_blank">Ngx Mapbox</a> zu arbeiten, allerdings schien diese nicht mit unserer Angular Version kompatibel zu sein. Die Daten für die Punkte auf der Weltkarte haben wir mithilfe von <mark>hier Lösung einfügen</mark> implementiert.
-<mark>Das Filtersystem steht im Moment noch auf der To Do Liste.</mark> Unser Lösungsansatz wäre gewesen, alle Universitäten in der Datenbank mit entsprechenden Tags zu versehen und den University Service entsprechend nur die Universitäten mit den richtigen Tags liefern zu lassen.
+Für die Weltkarte haben wir letztendlich die Standard <a href="https://www.mapbox.com/" target="_blank">Mapbox</a> Bibliothek verwendet. Wir hatten zuerst versucht, mit <a href="https://github.com/Wykks/ngx-mapbox-gl" target="_blank">Ngx Mapbox</a> zu arbeiten, allerdings schien diese nicht mit unserer Angular Version kompatibel zu sein.
+Die Universitäten auf der Karte zu visualisieren gestaltete sich jedoch auch mit der von uns verwendeten Mapbox als kompliziert. Es war von den Erstellern offenbar nicht vorgesehen, die Daten für auf der Karte abzubildende Punkte aus einer Datenbank zu laden. Wie auch in der Dokumentation von Mapbox nachzulesen ist, sind die beiden primär unterstützten Wege die statische Eingabe der Daten vor der Kompilierung in Typescript oder die statische eingabe der Daten online auf der Mapbox Website von wo aus sie auf die Karte geladen worden wären. Beide Wege kamen jedoch für unser Konzept nicht in Frage.
+Unsere Lösung war es letztendlich, aus den Datenbank-Daten ein Array zu bauen, das eine .json Datei simuliert. 
+
+![Screenshot](img/concept/MapboxImplementation1.jpg)
+
+Diese wurde dann letztendlich der Mapbox übergeben.
+
+![Screenshot](img/concept/MapboxImplementation2.jpg)
+
+Das Filtersystem steht im Moment noch auf der To Do Liste. Unser Lösungsansatz wäre gewesen, alle Universitäten in der Datenbank mit entsprechenden Tags zu versehen und den University Service entsprechend nur die Universitäten mit den richtigen Tags liefern zu lassen. Genauere Infomrationen hierzu können unter Ausblick gefunden werden.
 
 
 * ###Zoom zur Universität
 
 ![Screenshot](img/concept/showuni.png)
 
-<mark>Beschreibung der Implementierung fehlt noch</mark>
+Die Universitäten aus der Zoom Liste wurden mithilfe eines einfachen *NgFor erstellt. Das Hovern an sich wurde dann im Typescript ermöglicht, dazu wurden der funktion onHoverList($event), die aufgerufen wird, wenn über ein Listenelement gehovert wird, der Breiten- und Höhengrad der entsprechenden Universität übergeben.
+
+![Screenshot](img/concept/MapboxZoom1.jpg)
+
+Im Typescript konnten wir dann auf die flyTo() Funktion von Mapbox zurückgreifen, die automatisch für einen sanften Zoomübergang sorgte.
+
+![Screenshot](img/concept/MapboxZoom2.jpg)
 
 * ###Detailansicht der Universitäten 
 
 ![Screenshot](img/concept/detailuni.jpg)
 
-<mark>Beschreibung der Implementierung fehlt noch</mark>
+Die Detailansicht für eine Universität implementierten wir mit einem *NgIf gekoppelt an einen Boolean.
 
+![Screenshot](img/concept/MapboxDetail1.jpg)
 
+Bei einem Klick auf ein Universitätsicon lasen wir aus dem geworfenen Event die geklickte Universität aus. Dann nahmen wir noch einigen Einstellungen an den gelieferten Daten vor und mussten danach nur noch den showPopup Boolean auf true setzen. Dank des *NgIf blendete sich das Popup dann automatisch auf der Website ein.
+
+![Screenshot](img/concept/MapboxDetail2.jpg)
 
 
 ###General 
@@ -154,4 +173,7 @@ tbd!
 Internship war in der Umsetzung sehr problematisch, da von der Seite der THI hier überhaupt keine Hilfe angeboten wird. Es gibt nicht wie bei Study Abroad Partneruniversitäten oder etwas in der Art, die Studenten müssen sich um alles selbst kümmern. Deswegen zeigen wir unter Internship einfach nur, wie auch bei Study Abroad eine Weltkarte, in der die Firmen, in denen bereits Studenten waren, angezeigt werden. Falls vorhanden können dann auch Erfahrungsberichte zu den Firmen angezeigt werden.
 
 ####Implementierung
-tbd!
+
+![Screenshot](img/concept/internship.png)
+
+Hier verwendeten wir analog zur Karte von StudyAbroad eine Mapbox. Da der Fokus bei der Implementierung von Move allerdings auf dem Studieren im Ausland lag, haben wir hier nur beispielhaft einen einzigen Punkt markiert und keine Datenbankanbindung geschrieben. Weiterführende Informationen zu Internship können unter Asblick gefunden werden.
