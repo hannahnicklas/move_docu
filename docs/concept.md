@@ -23,7 +23,7 @@ Die Studenten sollen, auch wenn sie schon wissen oder zumindest meinen zu wissen
 
 ####Implementierung
 Für die Weltkarte haben wir letztendlich die Standard <a href="https://www.mapbox.com/" target="_blank">Mapbox</a> Bibliothek verwendet. Wir hatten zuerst versucht, mit <a href="https://github.com/Wykks/ngx-mapbox-gl" target="_blank">Ngx Mapbox</a> zu arbeiten, allerdings schien diese nicht mit unserer Angular Version kompatibel zu sein.
-Die Universitäten auf der Karte zu visualisieren gestaltete sich jedoch auch mit der von uns verwendeten Mapbox als kompliziert. Es war von den Erstellern offenbar nicht vorgesehen, die Daten für auf der Karte abzubildende Punkte aus einer Datenbank zu laden. Wie auch in der Dokumentation von Mapbox nachzulesen ist, sind die beiden primär unterstützten Wege die statische Eingabe der Daten vor der Kompilierung in Typescript oder die statische eingabe der Daten online auf der Mapbox Website von wo aus sie auf die Karte geladen worden wären. Beide Wege kamen jedoch für unser Konzept nicht in Frage.
+Die Universitäten auf der Karte zu visualisieren gestaltete sich jedoch auch mit der von uns verwendeten Mapbox als kompliziert. Es war von den Erstellern offenbar nicht vorgesehen, die Daten für auf der Karte abzubildende Punkte aus einer Datenbank zu laden. Wie auch in der Dokumentation von Mapbox nachzulesen ist, sind die beiden primär unterstützten Wege die statische Eingabe der Daten vor der Kompilierung in Typescript oder die statische Eingabe der Daten online auf der Mapbox Website von wo aus sie auf die Karte geladen worden wären. Beide Wege kamen jedoch für unser Konzept nicht in Frage.
 Unsere Lösung war es letztendlich, aus den Datenbank-Daten ein Array zu bauen, das eine .json Datei simuliert. 
 
 ![Screenshot](img/concept/MapboxImplementation1.jpg)
@@ -32,18 +32,18 @@ Diese wurde dann letztendlich der Mapbox übergeben.
 
 ![Screenshot](img/concept/MapboxImplementation2.jpg)
 
-Das Filtersystem steht im Moment noch auf der To Do Liste. Unser Lösungsansatz wäre gewesen, alle Universitäten in der Datenbank mit entsprechenden Tags zu versehen und den University Service entsprechend nur die Universitäten mit den richtigen Tags liefern zu lassen. Genauere Infomrationen hierzu können unter Ausblick gefunden werden.
+Das Filtersystem steht im Moment noch auf der To-Do-Liste. Unser Lösungsansatz wäre gewesen, alle Universitäten in der Datenbank mit entsprechenden Tags zu versehen und den University Service entsprechend nur die Universitäten mit den richtigen Tags liefern zu lassen. Genauere Informationen hierzu können unter Ausblick gefunden werden.
 
 
 * ###Zoom zur Universität
 
 ![Screenshot](img/concept/showuni.png)
 
-Die Universitäten aus der Zoom Liste wurden mithilfe eines einfachen *NgFor erstellt. Das Hovern an sich wurde dann im Typescript ermöglicht, dazu wurden der funktion onHoverList($event), die aufgerufen wird, wenn über ein Listenelement gehovert wird, der Breiten- und Höhengrad der entsprechenden Universität übergeben.
+Die Universitäten aus der Zoom Liste wurden mithilfe eines einfachen *NgFor erstellt. Das Hovern an sich wurde dann im Typescript ermöglicht, dazu wurden der Funktion onHoverList($event), die aufgerufen wird, wenn über ein Listenelement gehovert wird, der Breiten- und Höhengrad der entsprechenden Universität übergeben.
 
 ![Screenshot](img/concept/MapboxZoom1.jpg)
 
-Im Typescript konnten wir dann auf die flyTo() Funktion von Mapbox zurückgreifen, die automatisch für einen sanften Zoomübergang sorgte.
+Im Typescript konnten wir dann auf die flyTo()-Funktion von Mapbox zurückgreifen, die automatisch für einen sanften Zoomübergang sorgte.
 
 ![Screenshot](img/concept/MapboxZoom2.jpg)
 
@@ -176,4 +176,4 @@ Internship war in der Umsetzung sehr problematisch, da von der Seite der THI hie
 
 ![Screenshot](img/concept/internship.png)
 
-Hier verwendeten wir analog zur Karte von StudyAbroad eine Mapbox. Da der Fokus bei der Implementierung von Move allerdings auf dem Studieren im Ausland lag, haben wir hier nur beispielhaft einen einzigen Punkt markiert und keine Datenbankanbindung geschrieben. Weiterführende Informationen zu Internship können unter Asblick gefunden werden.
+Hier verwendeten wir analog zur Karte von StudyAbroad eine Mapbox. Da der Fokus bei der Implementierung von Move allerdings auf dem Studieren im Ausland lag, haben wir hier nur beispielhaft einen einzigen Punkt markiert und keine Datenbankanbindung geschrieben. Weiterführende Informationen zu Internship können unter Ausblick gefunden werden.
