@@ -23,9 +23,9 @@ Die Studenten sollen, auch wenn sie schon wissen oder zumindest meinen zu wissen
 
 ####Implementierung
 Für die Weltkarte haben wir letztendlich die Standard <a href="https://www.mapbox.com/" target="_blank">Mapbox</a> Bibliothek verwendet. Wir hatten zuerst versucht, mit <a href="https://github.com/Wykks/ngx-mapbox-gl" target="_blank">Ngx Mapbox</a> zu arbeiten, allerdings schien diese nicht mit unserer Angular Version kompatibel zu sein.
+Der Map Style mit dem Namen "move_blue", der über den Access Token eingebunden ist, wurde nach Möglichkeit den Screendesigns nachempfunden. Änderungen können über den Account "grandmagauss" mit dem Passwort "runtothehills9" realisiert werden. Der Style ist öffentlich und man könnte auch von einem anderen Mapbox Konto mit einem Fork daran weiterarbeiten.
 Die Universitäten auf der Karte zu visualisieren gestaltete sich jedoch auch mit der von uns verwendeten Mapbox als kompliziert. Es war von den Erstellern offenbar nicht vorgesehen, die Daten für auf der Karte abzubildende Punkte aus einer Datenbank zu laden. Wie auch in der Dokumentation von Mapbox nachzulesen ist, sind die beiden primär unterstützten Wege die statische Eingabe der Daten vor der Kompilierung in Typescript oder die statische Eingabe der Daten online auf der Mapbox Website von wo aus sie auf die Karte geladen worden wären. Beide Wege kamen jedoch für unser Konzept nicht in Frage.
 Unsere Lösung war es letztendlich, aus den Datenbank-Daten ein Array zu bauen, das eine .json Datei simuliert. 
-Der Map Style mit dem Namen "move_blue", der über den Access Token eingebunden ist, wurde nach Möglichkeit den Screendesigns nachempfunden. Änderungen können über den Account "grandmagauss" mit dem Passwort "runtothehills9" realisiert werden. Der Style ist öffentlich und man könnte auch von einem anderen Mapbox Konto mit einem Fork daran weiterarbeiten.
 
 ![Screenshot](img/concept/MapboxImplementation1.jpg)
 
