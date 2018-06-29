@@ -20,5 +20,7 @@ Unter images sind alle Bilder gespeichert, die wir auf der Seite verwenden. Wir 
 ![Screenshot](img/structure/routing.jpg)
 Das Routing ist Angular typisch über das bereitgestellte routing-module.
 
-##Methoden  
+
 ##Gliederung in Komponenten 
+Durch Angular legten wir alle Unterseiten und wiederverwendbaren Codebausteine in einzelne, ineinandergeschachtelte Komponenten an. 
+Komponentne können mit Angular leicht über den Befehl "ng generate component komponentenname" generiert werden und beinhalten die HTML, SCSS und Typescript Dateien der Komponente. Diese einzelnen Komponenten können nun beliebig als HTML-Tag durch ihren Selektor (in der Typescript Datei) wiederverwendet werden. Dies wendeten wir als Beispiel bei der Anzeige der Vorschau der einzelnen Experiences an. 

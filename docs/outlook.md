@@ -39,6 +39,9 @@ Die Internship-Seite beinhaltet momentan nur eine Standard-Mapbox-Karte. Hier mu
 
 ![Screenshot](img/concept/internship.png)
 
+###Responsive Design 
+Da die Website im 3. Semester nur als Desktop/Laptop Ansicht geplant war, ist das Design auch nicht auf mobile Geräte optimiert. Daher haben wir uns bei der Implementierung auch komplett auf diese Anzeige fokussiert und haben die mobile Implementierung in den Hintergrund gestellt. Die Website müsste (falls gewünscht) noch auf kleinere Geräte angepasst werden. 
+
 ##Unsere Beschränkungen
 
 Abgesehen von den noch nicht implementierten Features waren wir hauptsächlich in der Verwendung der Karte sehr eingeschränkt. Mit Mapbox war unser im Konzept geplantes Zoomsystem, bei dem der Nutzer von der Weltkarte aus zunächst nur eine Region wie Europa, USA etc. und erst im nächsten Schritt eine konkrete Universität auswählen konnte, nicht umsetzbar. Stattdessen kann der Benutzer nun frei zoomen und die Karte verschieben. Für die Beschränkung auf eine konkrete Region haben wir also nun nur noch die Filteroptionen zur Verfügung.
