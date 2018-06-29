@@ -22,7 +22,7 @@ Deswegen soll Move alle relevanten Informationen an einem Ort bündeln und den S
 
 ##UX und Design Konzept
 Als wir dieses Semester mit der Implementierung der Website begannen, war das nicht das erste Mal, dass wir uns mit dem Thema Move befassten. Bereits im Semester davor arbeiteten wir ein Designkonzept aus, um mit der späteren Website eine möglichst gute User Experience zu schaffen.
-<mark>Hier würde eine Beschreibung des UX Konzeptes kommen, wenn wir das brauchen / wollen</mark>
+Genauere Informationen zum UX Konzept können unter Konzept gefunden werden.
 
 ##Projektablauf
 Die Umsetzung des Projekts erfolgte mithilfe von Angular 5.
