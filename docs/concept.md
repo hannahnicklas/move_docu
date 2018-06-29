@@ -123,6 +123,25 @@ Die Detailseite setzt sich aus genaueren Informationen über die in dem Kurs beh
 ####Implementierung
 Die Implementierung erfolgte hier analog zu <a href="#implementationGeneral">General</a>.
 
+### Add to Favorits - Button 
+
+![Screenshot](img/concept/favorits.jpg)
+
+Der Add to Favorite Button/Anchortag sorgt dafür, dass die Universität in die Favoriten des aktuellen Studenten eingefügt wird
+Dieser überprüft zunächst ob mit einem *ngIf="isFav()", ob die Universität nicht bereits favorisiert wurde.
+Hierbei überprüft man den isFav Boolean des Arrayelementen in der simulierten Datenbank.
+	
+Falls dieser nicht favorisiert ist also false ist, dann wird "add to favorites" angezeigt.
+	
+Nach dem man darauf klickt aktiviert man den (click)-event (click)="setAsFav()" und die Methode setAsFav() wird aufgerufen.
+Die Methode führt dazu, dass der isFav Boolean des aktuellen Favorit Objekts auf true gesetzt und dieser der Methode updateIsFav() im studentservice als Eingabeparameter übergeben wird. Hier wird in der simulierten Datenbank das jeweilige Objekt im const Favorites Array mit dem übergebenen Favoriten Objekt überschrieben.
+Somit hat man nun ein Objekt im favorites Array, das einen isFav Boolean mit dem Wert true besitzt.
+	
+Nun ist im HTML das *ngIf="isFav()" true und somit sieht man den 'remove from favorites' Button/Anchortag
+Beim Klicken dieses Buttons "entfernt"(setzt den isFav Boolean in der simulierten Datenbank  wieder auf false) man den Favoriten aus den Favoriten.
+Dies erfolgt durch die Methode removeAsFav(), welche durch Klicken des Buttons erfolgt (mittels (click)-event).
+Die Methode macht das selbe wie die Methode setAsFav(), nur das hierbei der Boolean des Favoriten Objektes auf false gesetzt und dann übergeben wird.
+
 ##User
 ###Profile 
 ![Screenshot](img/concept/User_Profile.jpg)
@@ -135,6 +154,7 @@ Das Layout wurde mithilfe von drei Tabellen aufgebaut und die Daten des angemeld
 Auf dieser Unterseite befinden sich die Daten des angemeldeten Users.
 Einige Daten, wie z.B. E-Mail, Mobile und Emergency Contact kann der Benutzer durch Anklicken des "Edit-Buttons" bearbeiten und abspeichern.
 Die abgespeicherten Daten werden an die Pseudodatenbank übermittelt und zur Laufzeit mit der Funktion save(), die die persönlichen Daten der Studenten mit den neuen eingetragenen Werten überschreibt, übergeben.
+
 
 ###Application 
 ![Screenshot](img/concept/application.jpg)
@@ -152,11 +172,7 @@ Im rechten Bereich ist die Rangliste (Liste der Universitäten bei dem der Stude
 In diese Liste muss der Student nun die Favoriten einzeln in die „Dropzone“ hineinlegen.
 Innerhalb der Rangliste können die Universitäten frei nach Belieben geordnet oder wieder gelöscht werden. Die Liste darf maximal 5 Favoriten enthalten, da man sich im Bewerbungsprozess bei bis zu 5 Universitäten bewerben kann. Sobald sich mindestens eine Universität in der Rangliste befindet, blendet sich der "Finish-Application"-Button ein.
 
-* #### Add to Favorits - Button 
 
-![Screenshot](img/concept/favorits.jpg)
-
-<mark>Eine Erklärung der Implementierung des add to favorits Button</mark>
 
 
 ###Contact
@@ -166,7 +182,7 @@ Innerhalb der Rangliste können die Universitäten frei nach Belieben geordnet o
 Diese Seite beinhaltet lediglich die Kontaktdaten der THI und die des International Office für Auslands- und Studienangelegenheiten.
 
 ####Implementierung
-tbd!
+Contact ist einfach eine statische Html Seite.
 
 ##Internship 
 ####Argumentation
