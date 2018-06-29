@@ -10,7 +10,7 @@ Die Startseite soll bei Studenten, die die Website zum erstem Mal besuchen, einl
 ####Implementierung
 Bei der Startseite an sich handelt es sich um eine Standard HTML Seite ohne die Verwendung von Angular Funktionen. Es wurde lediglich etwas Typeskript zum Erzeugen des Paralax Scroll Effektes verwendet.
 
-![Screenshot](img/concept/login.jpg)
+![Screenshot](img/concept/login.png)
 
 
 ##Study Abroad
@@ -179,7 +179,7 @@ Zusätzlich wird das applied Objekt, mit dem boolean hasApplied auf true gesetzt
 
 
 ###Progress
-![Screenshot](img/progress.png)
+![Screenshot](img/concept/progress.png)
 ####Argumentation
 Diese Seite zeigt den Bewerbungsprozess nach dem man den Rankingprozess abgeschlossen hat.
 Sie wird an der Stelle, wo profile-application gezeigt wurde nun angezeigt.
