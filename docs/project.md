@@ -5,21 +5,42 @@ Hier finden Sie eine detaillierte Beschreibung des MOVE-Projektes
 ##Installationshinweise
 Verwendete Software:
 <ul>
-    <li> Nodejs </li>
-    <li> git-scm </li>
-    <li> Angular 5 </li>
-    <li> Node Package Manager </li>
-    <li> Visual Studio Code </li>
+    <li><a href="https://nodejs.org/en/download/">Nodejs </a></li>
+    <li><a href="https://git-scm.com/downloads"> git-scm </a></li>
+    <li> Angular 5 (npm install -g @angular/cli@1.7.4)</li> 
+    <li> Node Package Manager (in Nodejs enthalten)</li>
+    <li><a href="https://code.visualstudio.com/download"> Visual Studio Code </a></li>
+    <li><a href="https://github.com/hannahnicklas/move">Git Repository</a></li>
 </ul>
-Um das Projekt erstmals zu starten, müssen die Projektdateien zuerst in VS Code geöffnet werden. Anschließend muss zuerst der Befehl "npm install" ausgeführt werden, um die grundlegenden, nicht im Git gespeicherten Bibliotheken zu installieren. Danach kann das Projekt mit dem Befehl "ng --serve --port 4200" gestartet werden. In der darauf folgenden Fehlermeldung stehen alle von uns zusätzlich installierten Pakete. Diese müssen manuell mit dem Befehl "npm --save install [Paketname]" nachinstalliert werden. Ist dies geschehen, sollte Move nach dem nochmaligen ausführen von "ng --serve --port 4200" im Browser unter "localhost:4200" problemlos erreichbar sein.
 
+Erstmaliges starten des Projekts
 <ol>
-    <li>npm install</li>
+    <li><a href="https://nodejs.org/en/download/">Nodejs </a> installieren</li>
+    <li> <a href="https://git-scm.com/downloads"> git-scm </a> installieren</li>
+    <li><a href="https://code.visualstudio.com/download"> Visual Studio Code </a> oder andere Entwicklungsumgebung installieren</li>
+    <li> Den Projektordner aus dem <a href="https://github.com/hannahnicklas/move">Git Repository</a> klonen und auf dem PC speichern </li>
+    <li> In Visual Studio Code, oder anderer IDEA den Projektordner öffnen </li>
+    <li> In der Konsole an den Speicherort navigieren (wenn Projektordner in VisualCode geöffnet ist, befindet man sich in der VSCode Konsole bereits dort) </li>
+    <li> npm install -g @angular/cli@1.7.4 </li>
+    <br>
+    <ol style="background-color: lightgrey">
+        Nur für Mac User
+        <li>Ab macOS Sierra gibt es neue Sicherheitsvorschriften für das System, weshalb es notwendig sein könnte, die Befehle als Superuser sudo auszuführen. </li>
+        <li> sudo npm install -g @angular/cli@1.7.4 </li>
+        <li> Möglicherweise wurden trotz sudo nicht alle Packages installiert, weshalb diese nun einzeln nachinstalliert werden müssen. </li>
+        <li> sudo install node scripts/build.js
+             Damit der Befehl ordnungsgemäß ausgeführt werden kann, müssen die Develooper Tools von Apple installiert werden, dsfür bei dem Popup-Fenster auf installieren gehen. 
+             Danach den Befehl nochmal ausführen:
+             sudo install node scripts/build.jsS
+             </li>
+    </ol> 
+     <li>npm install</li>
     <li>npm install firebase angularfire2 --save</li>
     <li>npm install ngx-breadcrumbs --save</li>
     <li>npm install mapbox-gl --save</li>
     <li>ng --serve --port 4200</li>
 </ol>
+
 
 ##Hintergrund
 Move ist eine Website für Studenten der Technischen Hochschule Ingolstadt, die im Ausland studieren oder ein Praktikum machen wollen.

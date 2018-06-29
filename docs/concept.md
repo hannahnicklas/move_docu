@@ -160,6 +160,7 @@ Die abgespeicherten Daten werden an die Pseudodatenbank übermittelt und zur Lau
 ![Screenshot](img/concept/application.jpg)
 
 ####Argumentation
+Diese Seite wird gezeigt, wenn der Rankingprozess noch nicht abgeschlossen ist.
 Unter Application befinden sich die Universitäten, die unter Study Abroad ausgewählt wurden.
 Diese sind zunächst in zwei Listen unterteilt, die Favoritenliste und die Bewerbungsliste. Favorisiert der Nutzer unter Study Abroad eine Universität, so erscheint sie in der beliebig langen Favoritenliste. Mithilfe von Drag and Drop kann er sie von dort aus in seine Bewerbungsliste ziehen, die durch die Vorgaben der THI eine Länge von mindestens 1 bis maximal 5 haben muss. Logischerweise kann jede Universität auch jederzeit wieder aus beiden Listen entfernt werden.
 Zusätzlich hat kann der Nutzer auf der rechten Seite noch seinen Bewerbungsfortschritt sehen. Sind beispielsweise unter Profile nicht alle Punkte ausgefüllt, wird dies hier nochmal angezeigt. Ganz unten beim Bewerbungsfortschritt kann die Bewerbung, wenn letztendlich alles richtig ausgefüllt wurde, abgeschickt werden.
@@ -171,8 +172,37 @@ Diese Universitäten in der Favoritenliste sind "draggable", d.h. mit der Maus b
 Im rechten Bereich ist die Rangliste (Liste der Universitäten bei dem der Student sich bewirbt).
 In diese Liste muss der Student nun die Favoriten einzeln in die „Dropzone“ hineinlegen.
 Innerhalb der Rangliste können die Universitäten frei nach Belieben geordnet oder wieder gelöscht werden. Die Liste darf maximal 5 Favoriten enthalten, da man sich im Bewerbungsprozess bei bis zu 5 Universitäten bewerben kann. Sobald sich mindestens eine Universität in der Rangliste befindet, blendet sich der "Finish-Application"-Button ein.
+Klickt man auf diesen so bekommt man die Meldung das man sich beworben hat und der Rankingprozess ist nicht mehr erreichbar.
+Zusätzlich wird das applied Objekt, mit dem boolean hasApplied auf true gesetzt, da der Student den Rankingprozess beendet hat und dieser Wert auch auf der Datenbank überschrieben.
 
 
+
+###Progress
+![Screenshot](img/progress.png)
+####Argumentation
+Diese Seite zeigt den Bewerbungsprozess nach dem man den Rankingprozess abgeschlossen hat.
+Sie wird an der Stelle, wo profile-application gezeigt wurde nun angezeigt.
+Der *ngIf im profile-nav zeigt nun den profile-progress statt profile-application und somit kann man nicht mehr zum Rankingprozess gelangen, weil man diesen nun abgeschlossen hat.
+	
+Diese Seite hat keine Verbindung zur Datenbank und zeigt lediglich die einzelnen Schritte die man nach dem Rankingprozess machen muss.
+Die HTML-Seite besteht aus mehreren *ngIf, die die einzelenen Schritte ein- bzw. wieder ausblendet.
+Der User sieht an oberer Stelle seinen Fortschritt und erarbeitet sich seinen Weg durch den Bewerbungsprozess.
+Nach Abschluss des letzten Schrittes wird man benachrichtigt, dass man fertig ist und wird auf die Startseite verlinkt.
+
+####Implementierung
+Die einzelnen Schritte haben je einen boolean Wert auf false.
+Der erste Schritt, der die Bewerbung an der THI darstellt ist die Variable firstStage.
+Dieser ist true und wird im HTML auch als erstes gezeigt. Die jeweiligen anderen Schritte wurden chronologisch entsprechend gekennzeichnet.
+Hier haben wir, um es einfach zu halten die favorisierten Universitäten mit der Methode getFavorites() geholt. 
+	
+Die jeweiligen Next Step Buttons werden erst eingeblendet, wenn die notwendigen Schritte im aktuellen Prozess (Your progress for this step checkboxen) durchgeführt wurden. Da wir momentan noch keine Datenbank angebunden haben, sind die Next Step Buttons ohne Prüfung, ob die Schritte erfüllt wurden, und verweisen auf den nächsten Progressschritt.
+	 
+Diese Next Step Buttons sind mit der switch case Methode initNextStage(number) versehen. Diese aktiviert (setzt den jeweiligen boolean auf true) den nächsten Schritt im HTML. Sie führt bei jedem Aufruf die Methode switchAllSteps() durch, die dafür sorgt dass alle anderen Schritte ausgeblendet werden.
+	
+Wenn man beim letzten Schritt angelangt ist (sixthStage, after you return), dann wird der Finish application Button eingeblendet.
+Dieser ruft die Methode switchAllSteps() und setzt den applicationFinished boolean auf true.
+	
+Somit kommt die letzte *ngIf HTML-Seite, die den Benutzer sagt, dass man fertig ist und nach Klicken des OK! buttons Ihn auf die Startseite verlinkt.
 
 
 ###Contact
